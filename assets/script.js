@@ -5,11 +5,13 @@ let quantity = document.querySelector(".total-quantity")
 let buttonUp = document.getElementById('quantity-up')
 buttonUp.addEventListener('click',function(){
     itemTotal = itemTotal + 1
-    quantity.textContent = itemTotal
+    quantity.textContent = "Quantity:" + itemTotal
 })
 
 let buttonDown = document.getElementById('quantity-down')
 buttonDown.addEventListener('click',function(){
-    itemTotal = itemTotal - 1
-    quantity.textContent = itemTotal
+    if(itemTotal > 1){
+        itemTotal = itemTotal - 1
+        quantity.textContent = "Quantity:" + itemTotal
+    }
 })
