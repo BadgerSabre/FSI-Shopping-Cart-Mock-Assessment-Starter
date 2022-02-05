@@ -15,3 +15,8 @@ buttonDown.addEventListener('click',function(){
         quantity.textContent = "Quantity:" + itemTotal
     }
 })
+
+let removeBtn = document.querySelector('.remove')
+removeBtn.addEventListener('click', function(){
+    document.querySelector('.cart-item').remove()
+})
